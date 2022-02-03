@@ -17,7 +17,7 @@ export const List = styled.div`
 export const Pragraph1 = styled.p`
   font-size: 16px;
   line-height: 28px;
-  color: ${COLOR.BLACK};
+  color: ${(props) => props.theme.colors.black};
   margin: 0px;
   text-align: center;
 `;
