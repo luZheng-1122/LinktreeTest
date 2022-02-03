@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import COLOR from './styles/color';
 import { Container } from './styles/styledComponents';
+import ClassicList from './components/ClassicList';
 import './App.css';
 
 type ThemeType = {
@@ -20,7 +21,9 @@ function App() {
   //TODO: Add logic to change theme
   return (
     <ThemeProvider theme={{ colors: theme }}>
-      <Container></Container>
+      <Container>
+        <ClassicList />
+      </Container>
     </ThemeProvider>
   );
 }
