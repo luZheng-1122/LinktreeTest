@@ -16,7 +16,7 @@ const EventListData = {
   },
   list: [
     {
-      title: 'item 1',
+      title: 'Event Item 1',
       panelList: [
         {
           date: 'Fri, 01 Feb 2022',
@@ -63,7 +63,7 @@ const EventListData = {
       ],
     },
     {
-      title: 'item 2',
+      title: 'Event Item 2',
       panelList: [
         {
           date: 'Sat, 02 Feb 2022',
@@ -75,7 +75,7 @@ const EventListData = {
       ],
     },
     {
-      title: 'item 3',
+      title: 'Event Item 3',
       panelList: [
         {
           date: 'Sun, 03 Feb 2022',
@@ -87,7 +87,7 @@ const EventListData = {
       ],
     },
     {
-      title: 'item 4',
+      title: 'Event Item 4',
       panelList: [
         {
           date: 'Mon, 04 Feb 2022',
@@ -110,8 +110,9 @@ const EventList: React.FC<Props> = (props) => {
         icon={EventListData.profile.icon}
       />
       {EventListData.list.map((item, index) => (
-        <>
+        <LinkButtonwithPanel key={`${item.title}`}>
           <LinkButton
+            key={`${item.title}`}
             title={selectedIndex === index ? 'Shows' : item.title}
             onClick={() => {
               if (selectedIndex === index) {
@@ -120,7 +121,7 @@ const EventList: React.FC<Props> = (props) => {
             }}
           />
           {selectedIndex === index && <EventPanel panelList={item.panelList} />}
-        </>
+        </LinkButtonwithPanel>
       ))}
       <Logo src={logo} alt={'LinkTree Logo'} />
     </List>
@@ -139,10 +140,11 @@ const EventPanel: React.FC<{
   return (
     <>
       <PanelContainer>
-        {props.panelList.map((panelItem) => {
+        {props.panelList.map((panelItem, index) => {
           return (
             <PanelItem
-              href={panelItem.isSold ? 'javascript:void(0)' : panelItem.url}
+              key={`${panelItem.date}-${panelItem.venue}-${index}`}
+              href={panelItem.isSold ? '' : panelItem.url}
             >
               <EventDateLocation>
                 {/* TODO: import moment.js package to format the date */}
@@ -180,6 +182,13 @@ const PanelContainer = styled.div`
   background-color: ${(props) => props.theme.colors.background};
   overflow: scroll;
   overflow-x: hidden;
+`;
+
+const LinkButtonwithPanel = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const PanelItem = styled.a`

@@ -42,6 +42,7 @@ const ClassicList: React.FC<Props> = () => {
       />
       {ClassicListData.list.map((item) => (
         <LinkButton
+          key={`${item.title}-${item.url}`}
           title={item.title}
           onClick={() => {
             openClassicLink(item.url);
