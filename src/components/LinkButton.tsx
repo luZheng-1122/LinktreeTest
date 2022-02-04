@@ -20,7 +20,7 @@ const LinkButtonStyle = styled.button`
   height: 48px;
   background-color: ${(props) => props.theme.colors.primary};
   border: none;
-  margin: 10px;
+  margin-top: 10px;
   border-radius: 5px;
   cursor: pointer;
 

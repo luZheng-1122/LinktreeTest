@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import COLOR from './color';
+// TODO: load font family from Google Font API
 
 export const Container = styled.div`
   display: flex;
@@ -17,6 +17,14 @@ export const List = styled.div`
 export const Pragraph1 = styled.p`
   font-size: 16px;
   line-height: 28px;
+  color: ${(props) => props.theme.colors.black};
+  margin: 0px;
+  text-align: center;
+`;
+
+export const Pragraph2 = styled.p`
+  font-size: 12px;
+  line-height: 24px;
   color: ${(props) => props.theme.colors.black};
   margin: 0px;
   text-align: center;

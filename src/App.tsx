@@ -3,6 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import COLOR from './styles/color';
 import { Container } from './styles/styledComponents';
 import ClassicList from './components/ClassicList';
+import EventList from './components/EventList';
 import './App.css';
 
 type ThemeType = {
@@ -13,7 +14,7 @@ type ThemeType = {
 
 const defaultTheme: ThemeType = {
   primary: COLOR.GREEN,
-  background: COLOR.GRAY,
+  background: COLOR.GREY_LIGHT,
   text: COLOR.BLACK,
 };
 function App() {
@@ -23,6 +24,7 @@ function App() {
     <ThemeProvider theme={{ colors: theme }}>
       <Container>
         <ClassicList />
+        <EventList />
       </Container>
     </ThemeProvider>
   );
