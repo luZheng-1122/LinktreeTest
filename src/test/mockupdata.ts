@@ -1,4 +1,8 @@
 import profilePNG from '../assets/profile-picture.png';
+import spotifyLogo from '../assets/icons/spotify.svg';
+import appleLogo from '../assets/icons/apple-music.svg';
+import soundcloud from '../assets/icons/soundcloud.svg';
+import youtube from '../assets/icons/youtube.svg';
 import COLOR from '../styles/color';
 
 type ThemeType = {
@@ -101,6 +105,45 @@ export const EventListData = {
           url: 'https://www.songkick.com/live-stream-concerts/40197193-ed-sheeran',
         },
       ],
+    },
+  ],
+};
+
+export const MusicListData = {
+  profile: {
+    name: 'Emma',
+    icon: profilePNG,
+  },
+  musicList: [
+    {
+      title: 'Music Item 1',
+      name: '123',
+    },
+    {
+      title: 'Music Item 2',
+      name: '123',
+    },
+  ],
+  platforms: [
+    {
+      platform: 'Spotify',
+      icon: spotifyLogo,
+      url: 'https://www.spotify.com/',
+    },
+    {
+      platform: 'Apple Music',
+      icon: appleLogo,
+      url: 'https://music.apple.com/',
+    },
+    {
+      platform: 'Soundcloud',
+      icon: soundcloud,
+      url: 'https://soundcloud.com/',
+    },
+    {
+      platform: 'Youtube Music',
+      icon: youtube,
+      url: 'https://music.youtube.com/',
     },
   ],
 };

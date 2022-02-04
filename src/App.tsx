@@ -3,6 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import COLOR from './styles/color';
 import { Container } from './styles/styledComponents';
 import ClassicList from './components/ClassicList';
+import MusicList from './components/MusicList';
 import EventList from './components/EventList';
 import './App.css';
 
@@ -24,6 +25,7 @@ function App() {
     <ThemeProvider theme={{ colors: theme }}>
       <Container>
         <ClassicList />
+        <MusicList />
         <EventList />
       </Container>
     </ThemeProvider>
