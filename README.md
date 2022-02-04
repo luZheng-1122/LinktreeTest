@@ -1,6 +1,6 @@
 # Linktree Frontend Assessment
 
-![Preview](assets/preview.png)
+![Preview](src/assets/preview.png)
 
 ## The Problem
 
