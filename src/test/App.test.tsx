@@ -31,8 +31,6 @@ test('When a user clicks on a Music Player Link, the Spotify streaming platform 
     </ThemeProvider>
   );
 
-  //TODO: only test for the first link button
-
   // open the 1st show list
   const item1 = MusicListData.musicList[0].title;
   const linkElement = screen.getByText(item1);
@@ -55,8 +53,6 @@ test('When a user clicks on the Music Player Link and then on a Shows List Link,
       <MusicList />
     </ThemeProvider>
   );
-
-  //TODO: only test for the first link button
 
   // open the 1st show list
   const item1 = MusicListData.musicList[0].title;

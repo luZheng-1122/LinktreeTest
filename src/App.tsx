@@ -21,6 +21,7 @@ const defaultTheme: ThemeType = {
 function App() {
   const [theme, setTheme] = useState(defaultTheme);
   //TODO: Add logic to change theme
+  // solution: make a page for users to setup their prefered them, and store to API. Read user's color preference from API here and call setTheme()
   return (
     <ThemeProvider theme={{ colors: theme }}>
       <Container>

@@ -94,7 +94,9 @@ const EventPanel: React.FC<{
   return (
     <>
       <PanelContainer>
-        {/* TODO: removing controls, style the audio and control the audio using js */}
+        {/* TODO: removing 'controls' attribute, style the audio and control the audio using javascript */}
+        {/* play the video: document.getElementById('player').play() */}
+        {/* pause the video: document.getElementById('player').pause() */}
         {showMusic && (
           <>
             <audio data-testid={'musicPlayer'} controls>
@@ -109,7 +111,7 @@ const EventPanel: React.FC<{
             <PanelItem
               key={`${panelItem.platform}`}
               onClick={() => {
-                //TODO: change to the correct music url.
+                //TODO: change to the correct music url. Each platform may have different integrated method.
                 if (music === `${panelItem.url}${props.music}`) {
                   setShowMusic(!showMusic);
                 } else {
@@ -119,6 +121,7 @@ const EventPanel: React.FC<{
               }}
             >
               <MusicSection>
+                {/* TODO: change color of svg */}
                 <MusicIcon
                   src={panelItem.icon}
                   alt={`${panelItem.platform} icon`}
